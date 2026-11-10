@@ -1,5 +1,7 @@
 # Chapter 4: Disputes Beyond Cards
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 On push rails such as ACH credits, wires, instant payments and P2P sends, the payer's bank cannot reverse a payment by right. It can only ask the receiving bank to send the money back, and how much comes back depends on how fast the request arrives. This chapter builds the rail adapter pattern for that problem. One shared case model (`RailCase`) is driven by a declarative `RailProfile` for each rail. A profile sets the rail's direction, its state machine, its clocks and the evidence a case must hold. A late recall is recorded as data instead of ending the case, and card events are rejected on push rails. **All amounts, durations and recovery rates are illustrative; all data are synthetic.**
 
 ## Files

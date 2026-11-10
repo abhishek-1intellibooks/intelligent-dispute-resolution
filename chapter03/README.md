@@ -1,5 +1,7 @@
 # Chapter 3: Anatomy of the Card Dispute Lifecycle
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter follows a card dispute through its stages: cardholder contact, inquiry, pre-dispute alert, chargeback, representment, pre-arbitration and arbitration. It pulls two levers: Deflect acts before the chargeback and Recover acts after it.
 
 The folder encodes the lifecycle as a table-driven state machine. The machine refuses any action the rules do not allow, such as a refund once a chargeback exists, and records a missed response window as a default loss. A small module computes the break-even between contesting a claim and refunding it early. All amounts and fees are illustrative.

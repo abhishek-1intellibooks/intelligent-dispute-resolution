@@ -1,5 +1,7 @@
 # Chapter 8: The Dispute Data Foundation
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter assembles one trustworthy case record from four sources that share no common key. It
 generates four synthetic feeds (authorization, clearing, claim intake and merchant orders), lands
 them unchanged in SQLite, and links each of 435 claims to its clearing record (fuzzy match on

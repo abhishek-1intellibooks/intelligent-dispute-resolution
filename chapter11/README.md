@@ -1,5 +1,7 @@
 # Chapter 11: Document Intelligence and Evidence Automation
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter treats evidence as a set of facts rather than a pile of files. The requirements for a not-received claim are held as a versioned rule set. The pipeline reads the decisive facts (ship-to, amount, delivered-to, delivered-on, attestation) from order records, carrier records, proofs of delivery and invoices that arrive through five channels: API, native PDF, screenshot, clean scan and phone photo. It normalizes the values, matches addresses component by component and combines the checks into a sufficiency score with a veto, a verdict and named gaps. Any reading below a confidence of 0.80 is rejected. The pipeline then falls back to a more trusted source or asks a person. That cuts wrong facts sharply, at the cost of a review queue.
 
 > All data are synthetic and every result is illustrative. No OCR engine is needed: `make_evidence_data.py` simulates OCR character errors and per-character confidence by channel.

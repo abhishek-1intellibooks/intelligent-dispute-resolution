@@ -1,5 +1,7 @@
 # Chapter 2: Understanding the Rules of the Game: Regulation and Network Frameworks
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter sets out the rules every automated dispute decision must respect. They come in three layers, and each layer runs its own kind of clock:
 
 - **Law** (statutory clocks): Regulation E, Regulation Z, UK APP reimbursement.

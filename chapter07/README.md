@@ -1,5 +1,7 @@
 # Chapter 7: The Business Case for Dispute Transformation
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter builds the business case for a dispute program in the way a finance committee will accept it. First it puts dispute cost into one figure ($81M: $61M net loss plus $20M operating cost) and allocates that figure to the four levers of the Dispute Ledger. It then sizes each lever's benefit from drivers instead of percentages. The levers are applied in timeline order so that no dollar is counted twice. Finally the benefit is set against a three-year program cost, and the chapter runs scenarios and a sensitivity analysis. The chapter artifact is `business_case.xlsx`, a five-sheet workbook built from live Excel formulas. `business_case.py` holds the same lever logic in Python and serves as an independent test of the workbook. **Every input comes from Table 1.2 or is a labeled assumption. All figures are illustrative; replace the assumptions with your own data before using the model.**
 
 ## Files

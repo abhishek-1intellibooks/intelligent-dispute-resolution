@@ -1,5 +1,7 @@
 # Chapter 6: Friendly Fraud and First-Party Misuse
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter separates first-party misuse from the claims that resemble it: third-party compromise and merchant failure. It computes five signals per cardholder over a 90-day window that ends on a fixed as-of date:
 
 - claims in the window

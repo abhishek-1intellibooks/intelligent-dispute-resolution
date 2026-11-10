@@ -1,5 +1,7 @@
 # Chapter 15: Security, Compliance and Responsible AI
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter adds the controls that let an institution answer a regulator's request completely, quickly and truthfully. It turns a logistic model's score into specific reason codes. It reports flag and error rates by customer segment, and shows how two plausible proxy features made a first-party review flag treat older customers and second-language writers less favourably, although neither attribute was a feature. It replaces a redactor that missed half the card numbers with one that finds all of them and keeps order numbers intact. It adds a hash-chained audit log with write-once checkpoints, and a model card for Chapter 10's win model. The chapter describes regulatory expectations in general terms for engineers. It is not legal advice.
 
 All data are synthetic, and every result is illustrative.

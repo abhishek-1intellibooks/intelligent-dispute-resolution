@@ -1,5 +1,7 @@
 # Chapter 1: Understanding the Dispute Landscape in Modern Payments
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter defines a dispute and its three families: unauthorized, defective and first-party. It compares how disputes behave across payment rails and builds the economic picture of a representative mid-sized US issuer with about 4 million active cards. This folder holds two things. The first is the synthetic issuer dataset used throughout the book. The second is a notebook that reproduces the chapter's tables and data figures and computes the **baseline Dispute Ledger**. The Ledger shows how much of the issuer's combined loss and operating cost each of the four levers can address: Prevent, Deflect, Decide and Recover.
 
 All data are synthetic and all amounts are illustrative.

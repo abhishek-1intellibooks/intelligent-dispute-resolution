@@ -1,5 +1,7 @@
 # Chapter 10: Outcome Prediction and Recovery Optimization
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter decides which worked disputes are worth contesting and what each one is worth. A win model is trained on the analysts' contested cases, which are plentiful but biased because analysts chose cases they felt good about. It is then calibrated with Platt scaling on a small random exploration sample, which is the only unbiased view of what contesting achieves. Calibrated probabilities become expected values through Chapter 6's formula, `EV = p × A − c − q × V`. `fight_or_accept.py` turns each expected value into contest, accept or review, using a review band, the network time limit and a capacity cut. `policy_eval.py` replays September to December under six policies and also shows how a segment drifts after a network rule change.
 
 > All data are synthetic and every amount, fee and result is illustrative.

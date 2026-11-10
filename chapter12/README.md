@@ -1,5 +1,7 @@
 # Chapter 12: Generative AI for Dispute Operations
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter uses a language model for the writing around each dispute decision: case summaries, customer letters and representment narratives. The decisions themselves stay with other code and with people. The model is grounded in a numbered *context pack* built from the case, evidence and decision records. Rule passages are retrieved by filtering on network, reason family and edition before any similarity search. Every sentence must cite the items it relies on. In the representment, facts are written as placeholders that code fills from the record. A checker tests citations, values, attributes, coverage, tone and privacy. A small service regenerates a flagged draft once, sends it to a person if it is flagged again, logs every attempt, and releases nothing without a named approver.
 
 > All data are synthetic and every amount and result is illustrative. The rule passages imitate the shape of card network rules but are invented. They are not any network's actual rules. The networks are called Network A and Network B, as in the book.

@@ -1,5 +1,7 @@
 # Chapter 5: Dispute Operations: People, Process, Performance
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter looks at the operation that works the dispute queue: its operating model, the five timestamps of a case, a balanced KPI set, queueing and staffing, and quality controls. The chapter artifact is a KPI dashboard that reports the same closed cases under two definitions of cycle time. The analyst's view runs from first touch to closure; the customer's view runs from the claim to closure. Putting them side by side shows that queue wait, which the first-touch view cannot see, takes up most of the customer's wait. **All data are synthetic and all amounts and rates are illustrative.**
 
 ## Files

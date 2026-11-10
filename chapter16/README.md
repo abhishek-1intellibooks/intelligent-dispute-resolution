@@ -1,5 +1,7 @@
 # Chapter 16: Case Studies and the Future of Disputes
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 The final chapter looks at the whole platform. Three composite case studies show the book's components at work. A look at agentic commerce shows how disputes change when software buys on customers' behalf, which is where `mandate.py` checks a purchase against the signed mandate its customer gave. The chapter then sets out a roadmap with exit criteria (`roadmap.yaml`) and ends with the capstone, `run_month.py`. The capstone runs one synthetic month of 60,000 claims through the components of Chapters 8 to 15 and through a manual baseline. It is self-contained. It does not import the earlier chapters' code but takes each parameter the book quotes as a named constant, with its source chapter given in a comment (Table 16.5).
 
 All data are synthetic, and every amount and result is illustrative. The case studies in the chapter are composites.

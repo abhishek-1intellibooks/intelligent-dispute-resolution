@@ -1,5 +1,7 @@
 # Chapter 13: Agentic AI and Autonomous Resolution
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter lets the platform act on merchant-related claims: write to the merchant, chase the carrier, check clearing for a refund, file the chargeback or make a credit final. What the agent may never do is fixed in code. The model *chooses* the next action. A deterministic policy gate, which never reads the model's reasoning, *permits* or refuses it. The gate enforces boundaries (actions the agent may never take), money limits, preconditions checked against systems of record, and budgets. It defers recovery and evidence judgements to Chapters 10 and 11. The tools are narrow, typed and idempotent. A merchant's reply is data, never an instruction. Every outcome adverse to the cardholder goes to a person with a packet that contains the Chapter 12 summary, the action log, the reason and any alerts.
 
 > All data are synthetic and every amount and result is illustrative. The numbers measure what the gate stops, not how good any particular model is.

@@ -1,5 +1,7 @@
 # Chapter 14: Cloud-Native Dispute Platform Architecture
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter turns the components of Chapters 8 to 13 into one platform that stays calm on the busiest day of the year. Intake acknowledges a claim in milliseconds and does the work afterwards. Every state change is written together with its event through a transactional outbox. Consumers are idempotent, with retries and a dead-letter queue. Workers behind the queue autoscale on event lag (KEDA), and a shared token budget with a priority lane protects the model provider's limit. `peak_day.py` simulates a normal day of 40,327 claims and a peak day of 159,803, minute by minute. It compares a synchronous monolith with event-driven intake, and four ways of staffing the drafting stage.
 
 All data are synthetic, and every amount, price and result is illustrative.

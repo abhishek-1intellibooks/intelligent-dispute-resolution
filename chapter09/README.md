@@ -1,5 +1,7 @@
 # Chapter 9: ML for Classification and Triage
 
+📖 **Read the chapter:** [CHAPTER.md](CHAPTER.md)
+
 This chapter makes the first decisions about a claim when it arrives. It treats triage as three
 estimates and one policy that combines them. The estimates are the claim's family (unauthorized,
 defective or first-party), its expected effort, and its risk of missing the ten-business-day clock;
