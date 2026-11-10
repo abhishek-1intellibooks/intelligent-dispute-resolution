@@ -1,0 +1,19 @@
+# Recovery scales on event lag (Table 14.2).
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: recovery
+  namespace: disputes
+spec:
+  scaleTargetRef:
+    name: recovery
+  minReplicaCount: 2
+  maxReplicaCount: 10
+  cooldownPeriod: 300
+  triggers:
+  - type: kafka
+    metadata:
+      bootstrapServers: events:9092
+      consumerGroup: recovery
+      topic: evidence.scored
+      lagThreshold: '100'

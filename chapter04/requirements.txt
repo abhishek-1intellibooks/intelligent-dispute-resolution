@@ -1,0 +1,2 @@
+# demo.py and rail_adapters/ need only the Python 3.11+ standard library.
+pytest>=7.0   # for tests/ only

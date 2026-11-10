@@ -1,0 +1,24 @@
+model: outcome-win-probability
+version: outcome-1.0               # the model and its Platt map, one artifact
+owner: "Recovery analytics; validator: Model Risk (independent)"
+tier: 2
+intended_use: >
+  Estimate the probability that the issuer wins a contested card dispute,
+  for the contest-or-accept rule (fight_or_accept) and capacity ranking.
+not_for: >
+  Any decision about the cardholder; provisional credit; investigation
+  outcomes under Regulation E or Z.
+training_data: 4,906 analyst-contested cases, Jan-Aug 2025 (synthetic)
+calibration_data: 1,171 randomly contested exploration cases, Jan-Aug 2025
+test_results:
+  auc_contested_sep_dec: 0.749
+  mean_prediction_vs_observed: 36.7% vs 35.4% (663 exploration cases)
+  replay_net_recovery: $279,707 vs $132,883 historical (10,172 cases)
+known_limitations:
+  - Labels exist only for contested cases; level fixed on exploration data
+  - Card-not-present fraud segment drifted after a network rule change on
+    1 Oct 2025 (predicted 47-49%, observed 30-33%); segment monitoring added
+fairness: Customer attributes not used; merchant-facing decision. Reviewed.
+monitoring: calibration by segment monthly; exploration share fixed at 6%
+decision_settings: {contest_cost: 40, review_margin: 5, time_limit_days: 120}
+approved: Model Risk Committee, 2025-12-18

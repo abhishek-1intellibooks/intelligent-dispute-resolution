@@ -1,0 +1,18 @@
+# One image per event-driven case service. CHAPTER is the folder whose component
+# the service runs; HANDLER (set in the Deployment) binds it to the event log.
+#   docker build -f chapter14/deploy/Dockerfile.worker --build-arg CHAPTER=chapter10 -t dispute/recovery:1.0 .
+#   docker build -f chapter14/deploy/Dockerfile.worker --build-arg CHAPTER=chapter11 -t dispute/evidence:1.0 .
+#   docker build -f chapter14/deploy/Dockerfile.worker --build-arg CHAPTER=chapter12 -t dispute/writer:1.0 .
+#   docker build -f chapter14/deploy/Dockerfile.worker --build-arg CHAPTER=chapter13 -t dispute/agent:1.0 .
+#   docker build -f chapter14/deploy/Dockerfile.worker --build-arg CHAPTER=chapter08 -t dispute/case:1.0 .
+FROM python:3.11-slim
+ARG CHAPTER
+WORKDIR /app
+COPY ${CHAPTER}/requirements.txt /tmp/chapter-requirements.txt
+COPY chapter14/deploy/requirements-worker.txt /tmp/worker-requirements.txt
+RUN pip install --no-cache-dir -r /tmp/chapter-requirements.txt -r /tmp/worker-requirements.txt
+COPY ${CHAPTER}/ /app/
+COPY chapter14/events.py chapter14/consumer.py chapter14/deploy/worker.py chapter14/deploy/handlers.py /app/
+RUN useradd --uid 10001 app
+USER 10001
+CMD ["python", "worker.py"]

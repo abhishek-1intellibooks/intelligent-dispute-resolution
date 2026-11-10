@@ -1,0 +1,19 @@
+# Agent scales on lag, capped because it shares the provider's token limit with the writer.
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: agent
+  namespace: disputes
+spec:
+  scaleTargetRef:
+    name: agent
+  minReplicaCount: 2
+  maxReplicaCount: 20
+  cooldownPeriod: 300
+  triggers:
+  - type: kafka
+    metadata:
+      bootstrapServers: events:9092
+      consumerGroup: agent
+      topic: claim.classified
+      lagThreshold: '50'

@@ -1,0 +1,10 @@
+# Intake service (chapter14/intake_service.py). Build from the repository root:
+#   docker build -f chapter14/deploy/Dockerfile.intake -t dispute/intake:1.0 .
+FROM python:3.11-slim
+WORKDIR /app
+RUN pip install --no-cache-dir "fastapi>=0.110" "uvicorn[standard]>=0.29"
+COPY chapter14/events.py chapter14/intake_service.py /app/
+RUN useradd --uid 10001 app
+USER 10001
+EXPOSE 8080
+CMD ["uvicorn", "intake_service:app", "--host", "0.0.0.0", "--port", "8080", "--workers", "4"]

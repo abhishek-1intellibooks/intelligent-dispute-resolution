@@ -1,0 +1,10 @@
+# Chapter 9: ML for Classification and Triage (Python 3.11+)
+pandas>=2.0,<3
+numpy>=1.24
+scikit-learn>=1.4
+joblib>=1.3
+fastapi>=0.110
+uvicorn>=0.27
+pydantic>=2.0
+httpx>=0.27     # TestClient and demo_request.py --url
+pytest>=7       # tests only

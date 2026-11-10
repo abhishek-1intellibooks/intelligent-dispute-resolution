@@ -1,0 +1,64 @@
+# Recovery (Ch. 10): chapter10/fight_or_accept.py behind the event log (Dockerfile.worker, CHAPTER=chapter10).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recovery
+  namespace: disputes
+  labels:
+    app: recovery
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: recovery
+  template:
+    metadata:
+      labels:
+        app: recovery
+    spec:
+      containers:
+      - name: recovery
+        image: dispute/recovery:1.0
+        env:
+        - &id001
+          name: KAFKA_BOOTSTRAP
+          value: events:9092
+        - &id002
+          name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: recovery-db
+              key: url
+        - name: ROLE
+          value: consumer
+        - name: GROUP
+          value: recovery
+        - name: TOPICS
+          value: evidence.scored,merchant.replied
+        - name: HANDLER
+          value: handlers:recovery
+        resources:
+          requests:
+            cpu: 250m
+            memory: 256Mi
+          limits:
+            memory: 256Mi
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+      - name: outbox-relay
+        image: dispute/recovery:1.0
+        env:
+        - *id001
+        - *id002
+        - name: ROLE
+          value: relay
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            memory: 128Mi
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false

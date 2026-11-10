@@ -1,0 +1,7 @@
+# Chapter 15: Security, Compliance and Responsible AI
+# Python 3.11+
+numpy>=1.26
+pandas>=2.0,<3
+scikit-learn>=1.4
+PyYAML>=6.0,<7
+pytest>=8

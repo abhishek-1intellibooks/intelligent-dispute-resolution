@@ -1,0 +1,24 @@
+# Everything needed to run every chapter (Python 3.11+).
+# Each chapter folder also has its own requirements.txt with only what that chapter needs.
+pandas>=2.0,<3
+numpy>=1.26
+scikit-learn>=1.4
+joblib>=1.3
+PyYAML>=6.0,<7
+matplotlib>=3.8
+openpyxl>=3.1
+fastapi>=0.110
+pydantic>=2.0
+uvicorn>=0.29
+httpx>=0.27
+notebook
+nbformat>=5.9
+nbconvert>=7.0
+ipykernel>=6.0
+pytest>=8
+
+# Optional: each chapter runs without these and falls back to a built-in equivalent.
+# rapidfuzz>=3.0,<4     # chapter11 fuzzy matching
+# cryptography>=42      # chapter16 Ed25519 mandate signatures
+# locust>=2.24          # chapter14 load test
+# anthropic / openai    # chapter12-13 hosted model (offline stand-in by default)

@@ -1,0 +1,10 @@
+# Chapter 11: Document Intelligence and Evidence Automation (Python 3.11+)
+pandas>=2.0,<3
+numpy>=1.26
+scikit-learn>=1.4
+rapidfuzz>=3.0,<4      # optional: match.py falls back to an identical pure-Python ratio
+pytest>=8.0
+
+# Only to read real images instead of the simulated OCR output (not needed here):
+# pytesseract>=0.3.10
+# pillow>=10.0

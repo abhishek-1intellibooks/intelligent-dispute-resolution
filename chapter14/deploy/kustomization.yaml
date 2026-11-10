@@ -1,0 +1,20 @@
+# kubectl apply -k chapter14/deploy   (requires KEDA installed in the cluster)
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: disputes
+resources:
+  - k8s/namespace.yaml
+  - k8s/intake.yaml
+  - k8s/case.yaml
+  - k8s/triage.yaml
+  - k8s/recovery.yaml
+  - k8s/evidence.yaml
+  - k8s/writer.yaml
+  - k8s/agent.yaml
+  - intake-scaledobject.yaml
+  - case-scaledobject.yaml
+  - triage-scaledobject.yaml
+  - recovery-scaledobject.yaml
+  - evidence-scaledobject.yaml
+  - writer-scaledobject.yaml      # Listing 14.3
+  - agent-scaledobject.yaml

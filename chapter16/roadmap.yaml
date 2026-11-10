@@ -1,0 +1,60 @@
+# The roadmap of Chapter 16 as data (Table 16.4, Figure 16.4). Each exit
+# criterion names the check that proves it, so progress is reported by running
+# the checks rather than by asking for status. Months are indicative; phases overlap.
+roadmap: intelligent-dispute-platform
+version: 1
+horizon_months: 30
+principles:
+  - Data comes first
+  - Each phase delivers value on its own (Ch. 7 business case, payback about 16 months in the base case)
+  - Autonomy comes last
+phases:
+  - name: Foundation
+    chapters: [2, 3, 4, 5, 8]
+    months: [0, 9]
+    exit_criteria:
+      - criterion: Every claim has one case record
+        check: chapter08/assemble_case.py link report; zero claims without a case_id
+      - criterion: Every clock is data with an alert
+        check: chapter02/timelines.yaml read by the clock scanner (chapter14/deploy/clock_scanner.py); clock-safety SLO of Table 14.5
+      - criterion: KPIs are measured from the customer's claim
+        check: chapter05/ops_kpi_dashboard.ipynb measures time from the claim, not from case open
+  - name: Decide
+    chapters: [6, 9, 10]
+    months: [6, 15]
+    exit_criteria:
+      - criterion: Triage live with deadline-risk lanes
+        check: chapter09/triage_service.py deployed; at-risk lane SLO (Table 14.5) held for 30 days
+      - criterion: Win model calibrated on an exploration sample
+        check: chapter15/model_card.yaml test_results.mean_prediction_vs_observed within 2 points
+      - criterion: First fairness report produced
+        check: chapter15/fairness.py report with flag_ratio and error_ratio by age band and language
+  - name: Read and write
+    chapters: [11, 12]
+    months: [12, 21]
+    exit_criteria:
+      - criterion: Evidence read straight through for most packets
+        check: chapter11/evidence_pipeline.py straight-through share above 50%
+      - criterion: Every draft cited and checked; approval rates monitored
+        check: chapter12/guardrails.py runs on every draft; edit rate reported weekly
+  - name: Act
+    chapters: [13]
+    months: [18, 27]
+    exit_criteria:
+      - criterion: Agent run in shadow, then at L2, then at bounded L3
+        check: chapter13/evaluate.py results for each level, approved by the model risk committee
+      - criterion: Hostile-model scenario suite passes on every change
+        check: pytest chapter13/test_agent.py in the release pipeline
+  - name: Scale and govern
+    chapters: [14, 15]
+    months: [0, 30]          # throughout
+    exit_criteria:
+      - criterion: Peak-day load test passed
+        check: chapter14/loadtest/locustfile.py at 1.5 times the recorded peak; reconciliation counts equal
+      - criterion: Audit trail verified
+        check: chapter15/audit.py verify() returns None against write-once checkpoints
+      - criterion: Model cards and inventory current
+        check: every model in Table 15.5 has a card newer than its model version (chapter15/governance_demo.py check_model_card)
+capstone:
+  check: python chapter16/run_month.py
+  expect: audit trail intact; no claim over 14 calendar days

@@ -1,0 +1,17 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: writer
+spec:
+  scaleTargetRef:
+    name: writer                  # the Deployment running the Chapter 12 writer
+  minReplicaCount: 2              # warm workers overnight
+  maxReplicaCount: 20             # 200 drafts a minute = the token limit
+  cooldownPeriod: 300             # scale in slowly
+  triggers:
+    - type: kafka
+      metadata:
+        bootstrapServers: events:9092
+        consumerGroup: writer
+        topic: case.escalated
+        lagThreshold: "50"        # one replica per 50 claims waiting

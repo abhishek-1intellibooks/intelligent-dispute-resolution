@@ -1,0 +1,19 @@
+# Case and clocks scales on event lag (Table 14.2).
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: case
+  namespace: disputes
+spec:
+  scaleTargetRef:
+    name: case
+  minReplicaCount: 2
+  maxReplicaCount: 12
+  cooldownPeriod: 300
+  triggers:
+  - type: kafka
+    metadata:
+      bootstrapServers: events:9092
+      consumerGroup: case
+      topic: claim.received
+      lagThreshold: '200'

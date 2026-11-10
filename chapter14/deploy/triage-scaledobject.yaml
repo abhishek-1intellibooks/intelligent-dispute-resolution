@@ -1,0 +1,19 @@
+# Triage scales on event lag (Table 14.2).
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: triage
+  namespace: disputes
+spec:
+  scaleTargetRef:
+    name: triage
+  minReplicaCount: 2
+  maxReplicaCount: 20
+  cooldownPeriod: 300
+  triggers:
+  - type: kafka
+    metadata:
+      bootstrapServers: events:9092
+      consumerGroup: triage
+      topic: claim.received
+      lagThreshold: '100'

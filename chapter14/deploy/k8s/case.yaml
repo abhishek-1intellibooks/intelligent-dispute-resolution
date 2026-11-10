@@ -1,0 +1,92 @@
+# Case and clocks (Ch. 2, 3, 8): consumes every case event, keeps state and clocks.
+# Image: Dockerfile.worker with CHAPTER=chapter08. The clock scanner runs every minute
+# and is never paused by a release.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: case
+  namespace: disputes
+  labels:
+    app: case
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: case
+  template:
+    metadata:
+      labels:
+        app: case
+    spec:
+      containers:
+      - name: case
+        image: dispute/case:1.0
+        env:
+        - &id001
+          name: KAFKA_BOOTSTRAP
+          value: events:9092
+        - &id002
+          name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: case-db
+              key: url
+        - name: ROLE
+          value: consumer
+        - name: GROUP
+          value: case
+        - name: TOPICS
+          value: claim.received,claim.classified,evidence.scored,recovery.decided,case.escalated,letter.drafted,letter.approved,merchant.replied,agent.action_taken
+        - name: HANDLER
+          value: handlers:case_and_clocks
+        resources:
+          requests:
+            cpu: 250m
+            memory: 256Mi
+          limits:
+            memory: 256Mi
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+      - name: outbox-relay
+        image: dispute/case:1.0
+        env:
+        - *id001
+        - *id002
+        - name: ROLE
+          value: relay
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            memory: 128Mi
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: clock-scanner
+  namespace: disputes
+spec:
+  schedule: '* * * * *'
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+          - name: scanner
+            image: dispute/case:1.0
+            command:
+            - python
+            - clock_scanner.py
+            env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: case-db
+                  key: url

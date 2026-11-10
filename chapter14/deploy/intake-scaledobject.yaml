@@ -1,0 +1,18 @@
+# Intake scales on request rate (Table 14.2): one replica per 200 requests a second.
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: intake
+  namespace: disputes
+spec:
+  scaleTargetRef:
+    name: intake
+  minReplicaCount: 4
+  maxReplicaCount: 40
+  cooldownPeriod: 300
+  triggers:
+  - type: prometheus
+    metadata:
+      serverAddress: http://prometheus.monitoring:9090
+      query: sum(rate(http_requests_total{service="intake"}[1m]))
+      threshold: '200'

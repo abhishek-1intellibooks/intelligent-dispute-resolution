@@ -1,0 +1,7 @@
+# Chapter 16: Case Studies and the Future of Disputes
+# Python 3.11+
+numpy>=1.26
+pandas>=2.0,<3
+PyYAML>=6.0,<7
+cryptography>=42      # optional: mandate.py falls back to ed25519_fallback.py without it
+pytest>=8

@@ -1,0 +1,55 @@
+{
+  "model": "standin-1.0",
+  "retrieval": {
+    "questions": 138,
+    "similarity_top1": 0.551,
+    "similarity_top3": 0.978,
+    "filtered_top1": 1.0,
+    "filtered_top3": 1.0
+  },
+  "summaries": {
+    "prompt_only": {
+      "drafts": 1200,
+      "with_error_pct": 42.4,
+      "released_with_error_pct": 42.4
+    },
+    "grounded_cited": {
+      "drafts": 1200,
+      "with_error_pct": 26.4,
+      "released_with_error_pct": 2.4,
+      "flagged_pct": 40.4,
+      "false_alarm_pct": 15.8,
+      "sent_to_person_pct": 17.7
+    },
+    "grounded_slotted": {
+      "drafts": 1200,
+      "with_error_pct": 15.6,
+      "released_with_error_pct": 2.2,
+      "flagged_pct": 13.4,
+      "false_alarm_pct": 0.0,
+      "sent_to_person_pct": 1.9
+    }
+  },
+  "errors_by_type": {
+    "bad_citation": {
+      "drafts": 110,
+      "flagged_pct": 100.0
+    },
+    "omission": {
+      "drafts": 101,
+      "flagged_pct": 100.0
+    },
+    "wrong_fact": {
+      "drafts": 129,
+      "flagged_pct": 89.1
+    },
+    "overclaim": {
+      "drafts": 72,
+      "flagged_pct": 91.7
+    },
+    "unsupported_claim": {
+      "drafts": 148,
+      "flagged_pct": 80.4
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# Evidence scales on documents (pages) queued (Table 14.2).
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: evidence
+  namespace: disputes
+spec:
+  scaleTargetRef:
+    name: evidence
+  minReplicaCount: 1
+  maxReplicaCount: 30
+  cooldownPeriod: 300
+  triggers:
+  - type: kafka
+    metadata:
+      bootstrapServers: events:9092
+      consumerGroup: evidence
+      topic: document.received
+      lagThreshold: '20'

@@ -1,0 +1,5 @@
+# Namespace for the dispute platform
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: disputes

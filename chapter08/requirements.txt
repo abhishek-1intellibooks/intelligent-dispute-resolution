@@ -1,0 +1,4 @@
+# Chapter 8: The Dispute Data Foundation (Python 3.11+; sqlite3 is in the standard library)
+pandas>=2.0,<3
+numpy>=1.24
+pytest>=7  # tests only

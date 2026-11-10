@@ -1,0 +1,14 @@
+# Triage service (chapter09/triage_service.py, Listing 9.5). Build from the
+# repository root after running chapter09's training scripts, so that
+# triage_model.joblib and sla_model.joblib exist (in production they are pulled
+# from the model registry by version):
+#   docker build -f chapter14/deploy/Dockerfile.triage -t dispute/triage:1.0 .
+FROM python:3.11-slim
+WORKDIR /app
+COPY chapter09/requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+COPY chapter09/ /app/
+RUN useradd --uid 10001 app
+USER 10001
+EXPOSE 8000
+CMD ["uvicorn", "triage_service:app", "--host", "0.0.0.0", "--port", "8000"]

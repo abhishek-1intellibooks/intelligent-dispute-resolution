@@ -1,0 +1,354 @@
+# Regulatory, network and policy deadlines held as data (Chapter 2).
+#
+# Rules are stated as of October 2026. Every entry carries:
+#   id             unique rule identifier
+#   layer          law | network | policy           (Figure 2.1, Table 2.1)
+#   source         the provision the rule comes from
+#   edition        the edition of that source the entry was checked against
+#   applies_to     products the rule applies to
+#   starts_on      the case fact (event) from which time is counted
+#   amount, unit   the duration; unit is business_days or calendar_days
+#   consequence    what a miss costs
+#   effective_from the date from which this version of the rule applies
+#   last_verified  the date the entry was last checked against its source
+# Optional:
+#   when_any       the rule applies only if the claim carries at least one of these flags
+#   unless         the rule does not apply if the claim carries any of these flags
+#   note           anything the engine cannot compute itself
+#
+# Product keys: credit_card, debit_card (Visa unless prefixed mc_), mc_credit_card,
+# mc_debit_card, ach_consumer, ach_corporate, p2p, instant_consumer, wire, uk_faster_payments.
+# Business days use the US federal holiday calendar in clocks.py; an institution
+# substitutes its own calendar (12 CFR 1005.2(d)). UK entries need a UK calendar.
+#
+# This file is illustrative companion material, not legal advice. Confirm every
+# value against the edition in force before relying on it.
+
+edition: "2026-10"
+rules:
+  # ---------------------------------------------------------------- Regulation E
+  - id: reg_e_determine
+    layer: law
+    source: "12 CFR 1005.11(c)(1)"
+    edition: "12 CFR Part 1005, current through October 2026"
+    applies_to: [debit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: notice_received
+    amount: 10
+    unit: business_days
+    unless: [new_account]
+    consequence: "Supervisory finding; provisional credit becomes due by the same date if the investigation runs on"
+    note: "If not determined by this date, provisional credit is due by this date (1005.11(c)(2)(i))"
+    effective_from: "2013-10-28"
+    last_verified: "2026-10-10"
+  - id: reg_e_extended
+    layer: law
+    source: "12 CFR 1005.11(c)(2)"
+    edition: "12 CFR Part 1005, current through October 2026"
+    applies_to: [debit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: notice_received
+    amount: 45
+    unit: calendar_days
+    unless: [pos_or_foreign, new_account]
+    consequence: "Supervisory finding; treble damages exposure under 15 U.S.C. 1693m"
+    effective_from: "2013-10-28"
+    last_verified: "2026-10-10"
+  - id: reg_e_extended_90
+    layer: law
+    source: "12 CFR 1005.11(c)(3)"
+    edition: "12 CFR Part 1005, current through October 2026"
+    applies_to: [debit_card, mc_debit_card]
+    starts_on: notice_received
+    amount: 90
+    unit: calendar_days
+    when_any: [pos_or_foreign, new_account]
+    consequence: "Supervisory finding"
+    note: "Replaces reg_e_extended for new accounts, point-of-sale debit and transfers initiated outside a state"
+    effective_from: "2013-10-28"
+    last_verified: "2026-10-10"
+  - id: reg_e_determine_new_account
+    layer: law
+    source: "12 CFR 1005.11(c)(3)(i)"
+    edition: "12 CFR Part 1005, current through October 2026"
+    applies_to: [debit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: notice_received
+    amount: 20
+    unit: business_days
+    when_any: [new_account]
+    consequence: "Supervisory finding"
+    note: "New accounts (first 30 days); replaces reg_e_determine"
+    effective_from: "2013-10-28"
+    last_verified: "2026-10-10"
+  - id: reg_e_written_confirmation
+    layer: law
+    source: "12 CFR 1005.11(b)(2)"
+    edition: "12 CFR Part 1005, current through October 2026"
+    applies_to: [debit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: oral_notice_given
+    amount: 10
+    unit: business_days
+    consequence: "Consumer deadline: if missed, provisional credit may be withheld"
+    effective_from: "2013-10-28"
+    last_verified: "2026-10-10"
+  - id: reg_e_notify_credit
+    layer: law
+    source: "12 CFR 1005.11(c)(2)(ii)"
+    edition: "12 CFR Part 1005, current through October 2026"
+    applies_to: [debit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: provisional_credit_made
+    amount: 2
+    unit: business_days
+    consequence: "Supervisory finding"
+    effective_from: "2013-10-28"
+    last_verified: "2026-10-10"
+  - id: reg_e_report_results
+    layer: law
+    source: "12 CFR 1005.11(c)(1)"
+    edition: "12 CFR Part 1005, current through October 2026"
+    applies_to: [debit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: investigation_completed
+    amount: 3
+    unit: business_days
+    consequence: "Supervisory finding"
+    effective_from: "2013-10-28"
+    last_verified: "2026-10-10"
+  - id: reg_e_notice_window
+    layer: law
+    source: "12 CFR 1005.11(b)(1)(i)"
+    edition: "12 CFR Part 1005, current through October 2026"
+    applies_to: [debit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: statement_sent
+    amount: 60
+    unit: calendar_days
+    consequence: "Consumer deadline: later notice falls outside the error-resolution procedures"
+    effective_from: "2013-10-28"
+    last_verified: "2026-10-10"
+  - id: reg_e_liability_timely_notice
+    layer: law
+    source: "12 CFR 1005.6(b)(1)"
+    edition: "12 CFR Part 1005, current through October 2026"
+    applies_to: [debit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: loss_learned
+    amount: 2
+    unit: business_days
+    consequence: "Consumer liability rises from the lesser of $50 to the lesser of $500 (1005.6(b)(2))"
+    effective_from: "2013-10-28"
+    last_verified: "2026-10-10"
+
+  # ---------------------------------------------------------------- Regulation Z
+  - id: reg_z_acknowledge
+    layer: law
+    source: "12 CFR 1026.13(c)(1)"
+    edition: "12 CFR Part 1026, current through October 2026"
+    applies_to: [credit_card, mc_credit_card]
+    starts_on: notice_received
+    amount: 30
+    unit: calendar_days
+    consequence: "Supervisory finding; creditor may forfeit the right to collect (15 U.S.C. 1666(e))"
+    effective_from: "2011-12-30"
+    last_verified: "2026-10-10"
+  - id: reg_z_resolve
+    layer: law
+    source: "12 CFR 1026.13(c)(2)"
+    edition: "12 CFR Part 1026, current through October 2026"
+    applies_to: [credit_card, mc_credit_card]
+    starts_on: notice_received
+    amount: 90
+    unit: calendar_days
+    consequence: "Supervisory finding; creditor may forfeit the right to collect"
+    note: "Outer bound only. The two-complete-billing-cycles test needs cycle dates from the case record."
+    effective_from: "2011-12-30"
+    last_verified: "2026-10-10"
+  - id: reg_z_notice_window
+    layer: law
+    source: "12 CFR 1026.13(b)(1)"
+    edition: "12 CFR Part 1026, current through October 2026"
+    applies_to: [credit_card, mc_credit_card]
+    starts_on: first_statement_sent
+    amount: 60
+    unit: calendar_days
+    consequence: "Consumer deadline: later notice is not a billing-error notice"
+    effective_from: "2011-12-30"
+    last_verified: "2026-10-10"
+
+  # ---------------------------------------------------------------- Visa
+  - id: visa_13_1_filing
+    layer: network
+    source: "Visa Core Rules, 11.10.2"
+    edition: "Visa Core Rules and Visa Product and Service Rules, 18 April 2026"
+    applies_to: [credit_card, debit_card]
+    starts_on: processing_date
+    amount: 120
+    unit: calendar_days
+    consequence: "Issuer forfeits the chargeback"
+    note: "Or 120 days from the last expected delivery date; never more than 540 days from processing"
+    effective_from: "2026-04-18"
+    last_verified: "2026-10-10"
+  - id: visa_13_1_filing_max
+    layer: network
+    source: "Visa Core Rules, 11.10.2"
+    edition: "Visa Core Rules and Visa Product and Service Rules, 18 April 2026"
+    applies_to: [credit_card, debit_card]
+    starts_on: expected_delivery_date
+    amount: 120
+    unit: calendar_days
+    consequence: "Issuer forfeits the chargeback"
+    note: "Capped at 540 days from processing_date"
+    effective_from: "2026-04-18"
+    last_verified: "2026-10-10"
+  - id: visa_dispute_response
+    layer: network
+    source: "Visa Core Rules, dispute resolution (acquirer response)"
+    edition: "Visa Core Rules and Visa Product and Service Rules, 18 April 2026"
+    applies_to: [credit_card, debit_card]
+    starts_on: chargeback_filed
+    amount: 30
+    unit: calendar_days
+    consequence: "Merchant forfeits the defense; loss becomes final"
+    effective_from: "2026-04-18"
+    last_verified: "2026-10-10"
+  - id: visa_pre_arbitration_response
+    layer: network
+    source: "Visa Core Rules, dispute resolution (pre-arbitration)"
+    edition: "Visa Core Rules and Visa Product and Service Rules, 18 April 2026"
+    applies_to: [credit_card, debit_card]
+    starts_on: pre_arbitration_filed
+    amount: 30
+    unit: calendar_days
+    consequence: "Party forfeits the right to respond; liability defaults"
+    effective_from: "2026-04-18"
+    last_verified: "2026-10-10"
+
+  # ---------------------------------------------------------------- Mastercard
+  - id: mc_4853_filing
+    layer: network
+    source: "Mastercard Chargeback Guide, reason code 4853"
+    edition: "Mastercard Chargeback Guide, edition in force October 2026"
+    applies_to: [mc_credit_card, mc_debit_card]
+    starts_on: processing_date
+    amount: 120
+    unit: calendar_days
+    consequence: "Issuer forfeits the chargeback"
+    note: "Generally 120 days; condition-specific variations apply"
+    effective_from: "2026-01-01"
+    last_verified: "2026-10-10"
+  - id: mc_second_presentment
+    layer: network
+    source: "Mastercard Chargeback Guide, second presentment"
+    edition: "Mastercard Chargeback Guide, edition in force October 2026"
+    applies_to: [mc_credit_card, mc_debit_card]
+    starts_on: chargeback_filed
+    amount: 45
+    unit: calendar_days
+    consequence: "Merchant forfeits the defense"
+    effective_from: "2026-01-01"
+    last_verified: "2026-10-10"
+  - id: mc_pre_arbitration
+    layer: network
+    source: "Mastercard Chargeback Guide, pre-arbitration"
+    edition: "Mastercard Chargeback Guide, edition in force October 2026"
+    applies_to: [mc_credit_card, mc_debit_card]
+    starts_on: second_presentment_received
+    amount: 45
+    unit: calendar_days
+    consequence: "Issuer forfeits escalation"
+    effective_from: "2026-01-01"
+    last_verified: "2026-10-10"
+
+  # ---------------------------------------------------------------- Nacha (ACH)
+  - id: nacha_r10_r11_return
+    layer: network
+    source: "Nacha Operating Rules, Article Three, Subsection 3.12 and Appendix Four (R10, R11)"
+    edition: "Nacha Operating Rules, 2026 edition"
+    applies_to: [ach_consumer]
+    starts_on: settlement_date
+    amount: 60
+    unit: calendar_days
+    consequence: "Receiving bank loses the extended return right"
+    note: "Requires a Written Statement of Unauthorized Debit from the consumer"
+    effective_from: "2020-04-01"
+    last_verified: "2026-10-10"
+  - id: nacha_r29_return
+    layer: network
+    source: "Nacha Operating Rules, Appendix Four (R29)"
+    edition: "Nacha Operating Rules, 2026 edition"
+    applies_to: [ach_corporate]
+    starts_on: settlement_date
+    amount: 2
+    unit: business_days
+    consequence: "Return right lost; recovery only between institutions or through legal process"
+    effective_from: "2020-04-01"
+    last_verified: "2026-10-10"
+
+  # ---------------------------------------------------------------- UK APP reimbursement
+  - id: uk_app_reimburse
+    layer: law
+    source: "PSR Specific Requirement 1 / Specific Direction 20 (APP scams reimbursement)"
+    edition: "PSR policy statement PS23/3 and subsequent amendments, as of October 2026"
+    applies_to: [uk_faster_payments]
+    starts_on: claim_reported
+    amount: 5
+    unit: business_days
+    consequence: "Regulatory breach"
+    note: "Stop-the-clock: a request for information moves the deadline. Use a UK calendar."
+    effective_from: "2024-10-07"
+    last_verified: "2026-10-10"
+  - id: uk_app_final_decision
+    layer: law
+    source: "PSR Specific Requirement 1 / Specific Direction 20 (APP scams reimbursement)"
+    edition: "PSR policy statement PS23/3 and subsequent amendments, as of October 2026"
+    applies_to: [uk_faster_payments]
+    starts_on: claim_reported
+    amount: 35
+    unit: business_days
+    consequence: "Regulatory breach"
+    note: "Outer bound when the clock has been stopped. Cap of GBP 85,000 per claim."
+    effective_from: "2024-10-07"
+    last_verified: "2026-10-10"
+  - id: uk_app_claim_window
+    layer: law
+    source: "PSR Specific Requirement 1 (claim submission window)"
+    edition: "PSR policy statement PS23/3 and subsequent amendments, as of October 2026"
+    applies_to: [uk_faster_payments]
+    starts_on: final_payment_date
+    amount: 396
+    unit: calendar_days
+    consequence: "Claim falls outside mandatory reimbursement"
+    note: "13 months, approximated here as 396 days; compute calendar months in production"
+    effective_from: "2024-10-07"
+    last_verified: "2026-10-10"
+
+  # ---------------------------------------------------------------- Institutional policy
+  - id: policy_acknowledge
+    layer: policy
+    source: "Issuer dispute policy DP-01, section 3 (illustrative)"
+    edition: "DP-01 v4 (illustrative)"
+    applies_to: [credit_card, debit_card, mc_credit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: case_opened
+    amount: 1
+    unit: business_days
+    consequence: "Internal service breach"
+    effective_from: "2026-01-01"
+    last_verified: "2026-10-10"
+  - id: policy_decide
+    layer: policy
+    source: "Issuer dispute policy DP-01, section 4 (illustrative)"
+    edition: "DP-01 v4 (illustrative)"
+    applies_to: [credit_card, debit_card, mc_credit_card, mc_debit_card, ach_consumer, p2p, instant_consumer]
+    starts_on: case_opened
+    amount: 5
+    unit: business_days
+    consequence: "Internal service breach; escalation to team lead"
+    effective_from: "2026-01-01"
+    last_verified: "2026-10-10"
+  - id: policy_wire_recall
+    layer: policy
+    source: "Issuer dispute policy DP-01, section 7 (illustrative)"
+    edition: "DP-01 v4 (illustrative)"
+    applies_to: [wire]
+    starts_on: case_opened
+    amount: 0
+    unit: calendar_days
+    consequence: "Recovery chance falls with every hour; UCC Article 4A gives no right to recovery"
+    note: "Recall is sent the same day, measured in minutes"
+    effective_from: "2026-01-01"
+    last_verified: "2026-10-10"

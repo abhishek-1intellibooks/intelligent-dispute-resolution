@@ -1,0 +1,9 @@
+# Chapter 12: Generative AI for Dispute Operations
+# Python 3.11+
+scikit-learn>=1.4
+matplotlib>=3.7
+pytest>=7
+
+# Optional: only if you point llm_client.py at a hosted model (see README).
+# anthropic
+# openai

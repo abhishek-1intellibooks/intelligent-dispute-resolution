@@ -1,0 +1,9 @@
+# Chapter 13: Agentic AI and Autonomous Resolution
+# Python 3.11+. Reuses chapter12/ (llm_client.py and its stand-in model), so
+# install chapter12/requirements.txt as well.
+scikit-learn>=1.4        # the worked example retrieves rules through chapter12/rules.py
+pytest>=7
+
+# Optional: only if you point chapter12/llm_client.py at a hosted model.
+# anthropic
+# openai

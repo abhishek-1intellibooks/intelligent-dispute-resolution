@@ -1,0 +1,11 @@
+policy,workers,within_15,at_risk_within_15,at_risk_within_1,p95_wait_min,at_risk_p95_wait_min,largest_backlog,waiting_at_midnight,worker_hours,day
+"Fixed, normal size",14,0.2158,0.2170,0.1547,138.1000,138.1000,19767,5236,336.0000,peak
+"Fixed, peak size",40,0.7984,0.7982,0.6223,27.1000,27.1000,5592,0,960.0000,peak
+Autoscaled,2 to 40,0.7984,0.7982,0.6184,27.1000,27.1000,5592,0,395.0000,peak
+Autoscaled with priority,2 to 40,0.8169,1.0000,1.0000,32.1000,0.1000,5592,0,395.0000,peak
+"Autoscaled, capped at 20",2 to 20,0.7984,0.7982,0.6184,27.1000,27.1000,5592,0,305.5833,peak
+"Fixed, normal size",14,1.0000,1.0000,1.0000,0.1000,0.1000,0,0,336.0000,normal
+"Fixed, peak size",40,1.0000,1.0000,1.0000,0.1000,0.1000,0,0,960.0000,normal
+Autoscaled,2 to 40,1.0000,1.0000,0.9979,0.1000,0.1000,16,0,103.5333,normal
+Autoscaled with priority,2 to 40,1.0000,1.0000,1.0000,0.1000,0.1000,16,0,103.5333,normal
+"Autoscaled, capped at 20",2 to 20,1.0000,1.0000,0.9979,0.1000,0.1000,16,0,103.5333,normal

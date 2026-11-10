@@ -1,0 +1,19 @@
+# Capstone settings (Table 16.5). Every key overrides the constant of the same
+# name in run_month.py, where each one is documented with its source chapter.
+# Change these to rerun the month with your own rates and times. Volume and family
+# mix (CLAIMS_PER_MONTH, FAMILY_MIX) shape the generated claims_month.jsonl: change
+# them in run_month.py and delete the file to regenerate.
+FIRST_PARTY_THRESHOLD: 0.21        # Ch. 15
+FIRST_PARTY_MINUTES: 12            # assumption
+AGENT_FINISHED: 0.713              # Ch. 13
+AGENT_ADVERSE: 0.221               # Ch. 13
+AGENT_OTHER_ESCALATION: 0.065      # Ch. 13
+ISSUER_LIABILITY_SHARE: 0.35       # assumption
+AGENT_CHARGEBACK_LIMIT: 500        # Ch. 13
+CONTEST_COST: 40                   # Ch. 10
+ESCALATION_MINUTES: 8              # Ch. 13
+LETTER_APPROVAL_MINUTES: 3         # Ch. 12
+MANUAL_MINUTES_PER_CLAIM: 25       # Ch. 13 (illustrative)
+PLATFORM_COST_PER_CLAIM: 0.118     # Ch. 14
+ANALYST_COST_PER_HOUR: 45          # assumption
+MERCHANT_INQUIRY_WINDOW_DAYS: 5    # assumption

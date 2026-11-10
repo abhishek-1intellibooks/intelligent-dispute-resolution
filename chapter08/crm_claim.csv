@@ -1,0 +1,436 @@
+claim_id,channel,claim_received_at,card_token,claimed_amount,merchant_stated
+C00001,app,2025-03-20 11:31,tok_7b6c07e3,127.11,Granite
+C00002,phone,2025-05-15 03:08,tok_7c3c8624,50.17,app purchase
+C00003,app,2025-08-10 16:27,tok_b098d4a9,83.61,OrbitGadgets
+C00004,app,2025-06-16 06:49,tok_2ede0a7b,191.69,EmberCoffee
+C00005,phone,2025-05-26 20:51,tok_31a5aff7,45.81,Tidewater Audio
+C00006,app,2025-03-01 10:30,tok_7de0f8da,73.7,harbor
+C00007,phone,2025-08-12 09:49,tok_9502e578,19.55,Tidewater Audio
+C00008,app,2025-07-31 11:23,tok_6f0f005e,87.94,Zephyr Cyc
+C00009,web,2025-05-06 17:09,tok_7b37ec8b,70.06,Beacon Lighting
+C00010,web,2025-02-19 15:01,tok_c8313c75,51.81,Quill Statinery
+C00011,app,2025-04-16 16:54,tok_1496b4d7,29.63,some company
+C00012,app,2025-05-30 11:05,tok_a784ca23,25.61,Vista Mag
+C00013,phone,2025-03-17 02:02,tok_b736fd18,88.31,MeadowGarden
+C00014,app,2025-03-10 12:20,tok_be2e64eb,289.58,tidewater audio
+C00015,phone,2025-03-06 06:08,tok_6cd4123b,73.72,Glacier Wt
+C00016,app,2025-08-21 00:24,tok_2f243a40,134.67,AtlasSports
+C00017,phone,2025-01-28 06:25,tok_6dcf36f8,53.96,Ivory Lin
+C00018,app,2025-07-13 15:13,tok_b66cc98f,37.19,NorthwindOutdoor
+C00019,web,2025-01-20 21:34,tok_2057d78c,25.45,saffron
+C00020,app,2025-05-02 14:16,tok_7670baa4,25.97,Crescent Jew
+C00021,phone,2025-04-29 14:32,tok_92191a4b,22.31,OakHardware
+C00022,phone,2025-07-25 03:00,tok_c9f997dc,21.8,zephyr cycles
+C00023,app,2025-03-24 22:12,tok_537082ae,59.35,Granite Toy
+C00024,web,2025-08-16 09:19,tok_d04f79a1,83.48,Crescent Jewelry
+C00025,web,2025-04-19 03:04,tok_87191bc4,81.24,UmberFurniture
+C00026,web,2025-02-19 09:59,tok_48244731,105.06,Granite Toys online
+C00027,phone,2025-04-05 17:56,tok_06d6ad25,39.32,Ember Cof
+C00028,phone,2025-04-18 01:52,tok_109b87c8,67.32,Zephyr Cycles online
+C00029,web,2025-07-05 11:18,tok_a206488b,182.26,granite
+C00030,web,2025-03-28 20:52,tok_d09b7d01,31.9,driftwood
+C00031,app,2025-02-25 23:08,tok_afd8e768,49.59,Northwind
+C00032,app,2025-02-09 02:30,tok_6da8a666,58.54,juniper
+C00033,app,2025-05-16 06:54,tok_db5185ca,15.56,web shop
+C00034,web,2025-05-17 05:19,tok_4587b39a,64.46,Glacier Water online
+C00035,web,2025-06-29 04:34,tok_e7178822,69.86,glacier
+C00036,web,2025-07-29 09:51,tok_5a36c145,67.9,Ivory
+C00037,branch,2025-02-27 07:16,tok_3e15abf8,48.34,pebble
+C00038,app,2025-08-10 04:50,tok_d6b470a3,33.49,Quill Stationery onlie
+C00039,app,2025-06-14 12:00,tok_2fe9174e,110.76,Cobalt Ele
+C00040,app,2025-04-18 20:29,tok_46f589cd,26.27,Kestrel Games online
+C00041,app,2025-03-05 22:00,tok_560f9612,32.91,Juniper
+C00042,app,2025-07-28 16:12,tok_8ee86261,122.39,Zephyr Cyc
+C00043,web,2025-02-08 10:21,tok_166fe1bb,79.74,Quill Stationery
+C00044,phone,2025-02-07 15:28,tok_49bc1161,35.47,Pebbe Pet
+C00045,web,2025-02-22 07:53,tok_780dff34,49.07,riverstone
+C00046,app,2025-06-02 18:43,tok_766024f7,39.06,vista magazies
+C00047,phone,2025-02-21 06:02,tok_d3c6e66c,59.03,Kestrel Games online
+C00048,app,2025-03-21 01:35,tok_c23a4156,100.43,Orbt Gad
+C00049,app,2025-04-28 03:57,tok_62de5350,38.33,falcon
+C00050,app,2025-03-02 09:41,tok_9cbce198,60.12,CrescentJewelry
+C00051,web,2025-02-07 07:50,tok_54a94dd2,119.24,Riverstone
+C00052,phone,2025-08-13 09:38,tok_faef2930,202.69,Ivory Lin
+C00053,web,2025-04-16 23:01,tok_75ce4dcf,59.89,Bloom
+C00054,app,2025-07-04 05:42,tok_89f963c1,159.76,LanternCrafts
+C00055,app,2025-05-19 21:16,tok_9c6d3cb1,63.96,Quill Sta
+C00056,phone,2025-04-15 00:37,tok_7526e476,261.01,a seller
+C00057,branch,2025-04-15 14:23,tok_cdc5e09d,110.29,Zephyr Cyc
+C00058,web,2025-04-05 09:08,tok_d1636096,41.13,Atlas Sports online
+C00059,web,2025-05-08 01:14,tok_b736fd18,15.01,online order
+C00060,app,2025-06-02 13:15,tok_2285cde4,190.75,Falcon Optics online
+C00061,app,2025-08-07 10:45,tok_8efdc1f1,74.03,online order
+C00062,branch,2025-02-22 03:59,tok_dbc175d2,43.58,Tidewater Audio online
+C00063,web,2025-06-23 03:25,tok_69cf5fd4,36.91,glacer
+C00064,phone,2025-01-29 11:42,tok_9793615c,208.81,Riverstone Sho
+C00065,app,2025-05-03 00:44,tok_e9335c34,38.15,Riverstone Shoes online
+C00066,branch,2025-08-10 16:28,tok_48dce4c0,310.1,lantern
+C00067,phone,2025-01-17 10:22,tok_130e4826,16.0,Velvet Fashion online
+C00068,app,2025-06-29 16:26,tok_77a34fa1,267.11,WillowBeauty
+C00069,app,2025-05-22 08:49,tok_3e36e335,52.09,Harbor Books
+C00070,web,2025-05-18 18:56,tok_189a8f8f,65.81,Juniper Hom
+C00071,app,2025-04-27 05:55,tok_90a5a99e,85.17,Glacer Wat
+C00072,web,2025-07-08 03:59,tok_77e9f245,31.24,Juniper Home
+C00073,web,2025-01-18 01:53,tok_3d01dd51,164.0,Atlas
+C00074,phone,2025-05-30 08:27,tok_044bd40b,134.81,not sure
+C00075,phone,2025-05-06 23:02,tok_630d5920,27.88,Nimbus
+C00076,app,2025-04-11 22:34,tok_8f511088,36.77,retailer
+C00077,phone,2025-07-21 00:30,tok_941ff6af,67.59,pebble pets
+C00078,app,2025-01-20 08:07,tok_4ca0e776,80.7,Driftwood Art online
+C00079,branch,2025-06-16 20:03,tok_8bfcfc14,163.91,Glcier Water
+C00080,app,2025-01-26 05:33,tok_44b64605,47.47,saffron
+C00081,app,2025-05-20 01:30,tok_d69bc262,168.3,atlas sports
+C00082,app,2025-05-15 11:13,tok_83ced9cc,90.36,Umber Furniture
+C00083,web,2025-08-22 02:16,tok_0f2158f1,185.88,umber furniture
+C00084,app,2025-02-24 16:02,tok_29998377,92.17,umber furniture
+C00085,phone,2025-05-12 04:53,tok_3214a295,54.81,Tidewater Aud
+C00086,app,2025-06-13 17:02,tok_29c5d49e,84.76,juniper
+C00087,web,2025-05-06 17:09,tok_8324b61a,36.27,AtlasSports
+C00088,app,2025-05-19 12:57,tok_74d035c0,19.99,online order
+C00089,app,2025-05-27 10:49,tok_b02fb05c,42.02,Vista Magazines online
+C00090,phone,2025-05-27 16:27,tok_f8b41726,94.71,beaon lighting
+C00091,phone,2025-07-02 06:04,tok_6ed63548,68.09,TidewaterAudio online
+C00092,phone,2025-02-22 17:47,tok_912dd884,61.2,Ember Coffee onine
+C00093,phone,2025-02-26 02:53,tok_2cad87d4,70.17,Falcon Optics
+C00094,app,2025-06-07 00:14,tok_adcb3057,111.55,Northwind Outdoor online
+C00095,web,2025-04-01 09:48,tok_7912c802,69.83,Riverstone Shoes
+C00096,app,2025-06-29 06:50,tok_fd20405c,59.57,internet purchase
+C00097,branch,2025-03-20 19:11,tok_62de5350,138.63,Station Din
+C00098,phone,2025-07-18 00:50,tok_cff196f5,37.16,Granite
+C00099,app,2025-01-20 11:12,tok_d74e3963,196.64,Umber Fur
+C00100,phone,2025-02-26 21:52,tok_13d1dc85,92.55,Harbor
+C00101,web,2025-04-11 16:07,tok_06fa0a07,31.03,hollow vinyl
+C00102,app,2025-07-20 15:51,tok_9ce7832a,60.78,Driftwood Art online
+C00103,app,2025-04-08 18:57,tok_3fc2f7c6,64.63,tidewater audio
+C00104,app,2025-06-15 09:26,tok_1137d900,22.11,Cobalt Electronics
+C00105,app,2025-03-19 00:10,tok_a1138837,1102.57,Orbit Gadgets
+C00106,app,2025-08-29 22:31,tok_bf165347,94.88,JuniperHome
+C00107,app,2025-05-03 04:30,tok_7f75df2e,29.88,jniper
+C00108,phone,2025-02-17 02:29,tok_22c5e66b,162.15,Hollow Vinyl online
+C00109,web,2025-07-24 22:40,tok_8cd927af,94.23,HarorBooks
+C00110,app,2025-02-05 12:43,tok_b66cc98f,48.88,Ember Cof
+C00111,phone,2025-04-29 10:24,tok_5c65d7f0,91.04,Umber
+C00112,phone,2025-01-29 08:35,tok_3214a295,32.51,Elm Pharmacy online
+C00113,app,2025-05-21 23:02,tok_2197ea55,46.63,Harbor
+C00114,web,2025-04-06 09:53,tok_0d4519bb,45.66,Crescet
+C00115,phone,2025-02-23 02:34,tok_ef5516a0,52.29,retailer
+C00116,app,2025-06-13 03:16,tok_0173ca2e,29.95,Pixel Club online
+C00117,web,2025-02-10 13:08,tok_8cd927af,106.47,WilowBeauty
+C00118,app,2025-03-04 13:13,tok_7791297c,84.74,Atlas Sports oline
+C00119,app,2025-08-27 18:44,tok_28ae0e53,64.16,Meadow Garden online
+C00120,web,2025-03-31 12:35,tok_54cb90ac,89.84,orbit gadgets
+C00121,app,2025-08-12 20:10,tok_df3c4222,228.45,Riverstone Shoes
+C00122,app,2025-07-18 21:56,tok_e43d5350,25.28,Kestrel
+C00123,app,2025-05-20 17:36,tok_d04f79a1,60.21,Atlas Spo
+C00124,app,2025-02-17 12:52,tok_f1d3d97a,41.19,Lantern
+C00125,app,2025-05-09 20:29,tok_591f7cba,68.85,not sure
+C00126,web,2025-08-09 06:18,tok_c4f34e9f,45.92,Riverstone Shoes online
+C00127,web,2025-04-11 21:30,tok_f003b752,69.57,juniper home
+C00128,web,2025-08-03 06:28,tok_b4f84a68,34.1,Lantern
+C00129,phone,2025-05-13 15:00,tok_b291bad1,56.76,lantern
+C00130,web,2025-06-14 15:08,tok_658c605d,48.61,Nimbus ine
+C00131,phone,2025-04-15 03:33,tok_c9683d16,323.69,Summit Gea
+C00132,app,2025-01-29 23:53,tok_d7543829,74.94,FalconOptics
+C00133,app,2025-05-19 17:21,tok_d2cfa613,42.59,Glacier Water online
+C00134,web,2025-07-18 06:46,tok_23862e74,18.92,Willow
+C00135,phone,2025-01-28 19:06,tok_2aa0e3fa,172.57,Umber Fur
+C00136,app,2025-07-29 09:08,tok_3813340f,210.62,online store
+C00137,web,2025-07-17 00:01,tok_6736bdad,107.16,Falcon Optics online
+C00138,app,2025-04-19 11:20,tok_00405c97,44.52,Crescent Jew
+C00139,app,2025-05-24 05:11,tok_5737152f,130.52,Velvet Fas
+C00140,app,2025-04-24 14:56,tok_570041ed,19.42,Ivory
+C00141,phone,2025-05-30 18:39,tok_4b8c8244,49.92,vista magazines
+C00142,phone,2025-04-12 10:04,tok_7de0f8da,34.49,web shop
+C00143,phone,2025-06-01 11:36,tok_2ede0a7b,86.06,ember
+C00144,web,2025-06-27 18:54,tok_d35768e7,130.54,Umber Furniture
+C00145,app,2025-07-01 11:46,tok_07ac9086,122.18,CrescentJewelry
+C00146,app,2025-02-19 07:54,tok_d7fe3386,86.47,Glacier Water online
+C00147,app,2025-07-20 16:34,tok_a1da5e59,38.01,crescent
+C00148,web,2025-05-16 06:57,tok_13cc14e4,32.42,IvoryLinen
+C00149,web,2025-03-07 04:07,tok_cc009f2f,59.86,ember
+C00150,phone,2025-04-29 22:55,tok_7670baa4,11.13,Fresh Cra
+C00151,phone,2025-01-22 19:16,tok_dba441bc,116.86,Tidewater Audio
+C00152,app,2025-04-18 06:57,tok_36fe164c,175.08,Lantern Cra
+C00153,app,2025-05-25 19:24,tok_b8971f28,127.18,willow beauty
+C00154,web,2025-06-02 21:34,tok_6f0f005e,25.14,bloom box
+C00155,app,2025-08-12 23:44,tok_3de7e938,101.85,Corner
+C00156,web,2025-08-17 21:34,tok_3226409d,44.06,Juniper
+C00157,app,2025-04-21 17:38,tok_5a720f3e,105.05,Kestrl Games
+C00158,phone,2025-08-02 22:30,tok_e6f34be1,108.0,SaffronKitchen
+C00159,app,2025-07-13 08:57,tok_ce3e21f0,90.83,web shop
+C00160,phone,2025-06-06 03:06,tok_45a73975,60.9,meadow
+C00161,app,2025-08-19 00:54,tok_29c52bfb,188.57,online order
+C00162,branch,2025-04-24 14:59,tok_e6453487,30.31,Saffron
+C00163,app,2025-08-22 10:42,tok_11923879,240.6,Tidewater Audio online
+C00164,app,2025-07-19 01:09,tok_f317cefa,94.16,Riverstone Sho
+C00165,phone,2025-05-14 04:46,tok_54289937,248.74,atlas
+C00166,app,2025-02-05 21:30,tok_ad877bf7,297.37,Harbor Books online
+C00167,phone,2025-08-19 07:31,tok_f4a82e56,19.97,MeadowGarden
+C00168,app,2025-01-23 11:39,tok_679090c6,106.86,Harbo Boo
+C00169,app,2025-08-19 11:31,tok_b445d507,118.77,Crescent Jewelry online
+C00170,web,2025-07-17 19:27,tok_d8fe4eae,30.34,Falcon Opt
+C00171,web,2025-02-17 05:15,tok_f42e9a5b,73.78,zephy cycles
+C00172,web,2025-01-25 10:50,tok_364f1e83,154.83,Plaz Cinema online
+C00173,web,2025-02-18 01:26,tok_2ede0a7b,47.74,Crescent Jewelry
+C00174,phone,2025-04-27 19:59,tok_4b6c18fe,67.23,ZephyrCycles
+C00175,app,2025-05-24 22:44,tok_130e4826,235.04,Falcon
+C00176,app,2025-08-27 22:44,tok_af1ea1d0,80.73,juniper home
+C00177,web,2025-04-03 01:33,tok_766024f7,50.8,Pixel Clu
+C00178,app,2025-07-15 18:49,tok_195b216b,79.22,umber furniture
+C00179,app,2025-08-05 10:09,tok_71049fdd,68.94,Umber Fur
+C00180,web,2025-04-04 09:34,tok_708c6a96,333.06,Tidewater Audio online
+C00181,app,2025-03-26 08:44,tok_13cc14e4,76.16,Falcon
+C00182,web,2025-02-15 03:20,tok_8d365397,17.4,pebble
+C00183,app,2025-04-30 04:21,tok_d14e7b19,102.68,kestrel games
+C00184,app,2025-05-06 13:14,tok_7c798588,283.79,Summit Gear
+C00185,app,2025-04-17 12:52,tok_6b1570f5,114.99,summit ger
+C00186,app,2025-03-11 02:38,tok_1844ed40,96.62,orbit gadgets
+C00187,phone,2025-07-18 21:27,tok_ce3e21f0,33.15,Willow Beauty
+C00188,app,2025-05-20 05:32,tok_578cca99,120.24,Kestre Games
+C00189,web,2025-04-29 14:23,tok_c4655d91,50.24,Velvet
+C00190,branch,2025-02-13 05:02,tok_0f10e9a0,287.43,umber furniture
+C00191,phone,2025-02-27 20:11,tok_fd70323d,111.34,driftwood
+C00192,web,2025-05-26 23:12,tok_9b7a035a,16.27,beacon
+C00193,app,2025-08-10 06:06,tok_507be30a,127.71,Cobalt Electronics online
+C00194,app,2025-08-06 01:04,tok_13cc14e4,131.17,orbit gadgets
+C00195,web,2025-04-20 09:42,tok_1bc62580,30.64,orbit
+C00196,web,2025-07-07 04:07,tok_f8b41726,75.64,Crescen Jewelry online
+C00197,app,2025-03-16 01:24,tok_6516256e,405.58,OakHardware
+C00198,branch,2025-05-22 14:43,tok_bf165347,45.91,Ivory Lin
+C00199,phone,2025-03-25 08:02,tok_2e7a50e2,26.39,unknown merchant
+C00200,branch,2025-06-07 11:35,tok_1cc98766,25.92,Crescent
+C00201,web,2025-03-10 00:16,tok_d8e5d3bc,53.49,Northwind Outdoor
+C00202,phone,2025-03-30 10:47,tok_732ceb79,326.22,app purchase
+C00203,phone,2025-04-03 10:49,tok_766024f7,38.8,Vista Magazines online
+C00204,app,2025-03-27 07:42,tok_ba1275dd,58.26,Bloom Box oline
+C00205,app,2025-04-01 04:36,tok_7670baa4,108.95,Driftwood Art online
+C00206,web,2025-06-24 02:44,tok_c4fff2be,24.48,Atlas
+C00207,phone,2025-02-01 00:47,tok_6f282d4e,186.45,retailer
+C00208,phone,2025-02-23 19:56,tok_f1d3d97a,65.6,crescnt jewelry
+C00209,web,2025-06-04 06:26,tok_bf165347,89.05,Crescent Jew
+C00210,branch,2025-05-02 22:44,tok_4ca0e776,43.08,harbor
+C00211,phone,2025-08-18 01:59,tok_716cb9b5,22.5,some company
+C00212,phone,2025-04-04 02:18,tok_b78d526a,69.98,ZephyrCycles
+C00213,web,2025-02-17 09:01,tok_21062b61,197.49,zephyr cycles
+C00214,web,2025-08-28 14:54,tok_073122a8,44.87,Ember Coffee online
+C00215,web,2025-06-17 17:27,tok_dbfb7609,34.98,Fresh Crate online
+C00216,web,2025-05-08 22:05,tok_cfeaa63f,38.31,WillowBeauty
+C00217,phone,2025-03-23 04:04,tok_469a3a08,114.73,Willo Bea
+C00218,app,2025-04-17 10:52,tok_0f013b0f,23.79,a seller
+C00219,web,2025-06-30 14:51,tok_0b141d53,58.86,Granite Toys nline
+C00220,phone,2025-03-12 15:06,tok_f1d3d97a,178.49,falcon
+C00221,phone,2025-03-03 02:31,tok_9c6d3cb1,42.54,driftwood art
+C00222,phone,2025-07-21 00:00,tok_7d20d60a,17.51,ember cofee
+C00223,app,2025-04-19 19:31,tok_d2cfa613,24.72,Velvet Fashion online
+C00224,app,2025-02-05 13:14,tok_43d5091c,60.13,hollow vinyl
+C00225,web,2025-02-24 18:42,tok_80eee6f6,42.76,riverston shoes
+C00226,app,2025-06-29 18:47,tok_7e972ed5,652.19,Velvet Fashion
+C00227,app,2025-06-11 07:26,tok_01f733da,58.09,Ivory
+C00228,branch,2025-06-20 10:22,tok_cb11da55,15.09,Pixel
+C00229,phone,2025-04-09 01:26,tok_0e79347b,144.22,Harbor Books online
+C00230,app,2025-04-13 05:07,tok_cb33acdd,84.0,Pebble Pets
+C00231,app,2025-05-07 00:42,tok_c4655d91,50.24,Velvet
+C00232,web,2025-05-20 08:36,tok_d7603b02,116.89,Cobalt Ele
+C00233,web,2025-07-30 06:17,tok_9c6d3cb1,61.95,Driftwood Art
+C00234,app,2025-06-02 03:48,tok_d1636096,203.72,Atlas Sports
+C00235,app,2025-07-23 16:33,tok_07ac9086,135.64,Tidewater
+C00236,phone,2025-05-07 21:23,tok_58c8e00b,233.57,web shop
+C00237,phone,2025-06-04 02:11,tok_096ca4f8,85.67,a shop
+C00238,web,2025-08-04 02:45,tok_04ba9641,70.23,retailer
+C00239,app,2025-04-11 20:51,tok_ea3a2ffc,55.51,velvet
+C00240,app,2025-06-23 14:55,tok_84222cec,74.65,Min Street Fuel online
+C00241,web,2025-04-21 08:01,tok_6f0f005e,170.17,Station Diner online
+C00242,app,2025-06-20 09:51,tok_cb33acdd,588.9,Lantern Crafts online
+C00243,phone,2025-08-16 19:14,tok_7cc65803,399.51,Summit Gear
+C00244,web,2025-02-17 21:12,tok_e9e1f4f0,112.83,Falco Opt
+C00245,web,2025-06-11 04:19,tok_776b7941,69.43,ember
+C00246,phone,2025-05-13 11:09,tok_1c9595d5,115.26,Juniper Hom
+C00247,app,2025-01-15 15:29,tok_c5e4ad36,77.91,atlas
+C00248,web,2025-07-07 02:07,tok_2197ea55,104.2,Orbit Gagets online
+C00249,phone,2025-08-12 13:08,tok_af45316a,22.94,kestrel games
+C00250,phone,2025-04-01 18:05,tok_a1f1ad42,18.86,fresh
+C00251,web,2025-02-08 02:08,tok_630d5920,156.84,Willow
+C00252,app,2025-07-12 18:32,tok_6466e732,161.33,Juniper
+C00253,app,2025-03-02 11:12,tok_bbd8ca64,34.24,GraniteToy
+C00254,app,2025-05-25 23:42,tok_9b55932d,136.42,Kestrel Games
+C00255,web,2025-06-15 07:48,tok_1713d191,28.54,WillowBeauty
+C00256,web,2025-03-26 10:55,tok_80b45260,163.64,SummitGear
+C00257,web,2025-07-29 00:32,tok_ab3d9631,56.37,Willow Beauty
+C00258,app,2025-03-21 03:18,tok_11923879,17.86,Glacier Wat
+C00259,app,2025-05-17 04:58,tok_0cf2ce45,46.75,Kestrel Gam
+C00260,app,2025-03-21 20:11,tok_f3dfd0cc,49.68,Granite Toys
+C00261,branch,2025-07-01 23:38,tok_7265a9e1,20.15,Umber Fur
+C00262,branch,2025-08-20 02:16,tok_7eb6aa96,19.93,kestrel ames
+C00263,phone,2025-03-20 04:28,tok_5735fc5a,95.24,Falcon Otics online
+C00264,web,2025-08-06 00:34,tok_a1926ebb,45.09,Pebble Pet
+C00265,branch,2025-05-01 10:31,tok_40fb5561,295.13,Ivory Linen
+C00266,web,2025-05-14 02:35,tok_7f75df2e,29.88,JuniperHome
+C00267,web,2025-06-25 15:36,tok_f7ca261a,160.81,crescent
+C00268,phone,2025-01-23 08:08,tok_d8e5d3bc,330.96,Pebble Pet
+C00269,app,2025-05-11 13:12,tok_43d5091c,124.08,SaffronKitchen
+C00270,branch,2025-07-14 13:16,tok_c88eb091,11.58,unknown merchant
+C00271,phone,2025-06-05 18:34,tok_e685f2e9,56.15,velvet fashion
+C00272,web,2025-07-06 07:38,tok_820a1b87,211.45,Pebble Pets online
+C00273,app,2025-08-14 16:37,tok_dce75d19,20.99,granite
+C00274,branch,2025-07-10 20:52,tok_0eab90ea,73.78,Falcon
+C00275,web,2025-03-07 14:22,tok_c8674f4d,112.43,LanternCrafts
+C00276,app,2025-07-22 12:26,tok_52b4dced,113.55,Falcon Opt
+C00277,web,2025-06-04 00:32,tok_03c3ac42,213.54,Ivory Linen online
+C00278,app,2025-07-16 19:04,tok_6466e732,161.33,juniper
+C00279,web,2025-06-18 22:30,tok_80eee6f6,53.1,juniper
+C00280,phone,2025-01-21 22:19,tok_7c798588,244.73,lantern crafts
+C00281,phone,2025-03-22 07:46,tok_035ae9f6,135.1,Tidwater
+C00282,branch,2025-02-07 03:38,tok_3787832d,52.14,SaffronKitchen
+C00283,app,2025-06-04 10:45,tok_cef9de6b,122.08,Cobalt Electronics
+C00284,app,2025-03-23 04:26,tok_3214a295,135.79,Juniper Home online
+C00285,app,2025-06-17 04:39,tok_86e8f1c0,45.38,Hrbor Boo
+C00286,app,2025-06-21 10:40,tok_6cc15c4d,151.68,EmberCoffee
+C00287,phone,2025-05-18 19:56,tok_23720641,25.92,kestrel gaes
+C00288,phone,2025-06-18 04:13,tok_14058384,108.86,GraniteToys
+C00289,phone,2025-06-17 05:36,tok_26b5748c,137.35,ivory linen
+C00290,web,2025-04-07 05:28,tok_771c801e,25.25,Driftwood Art
+C00291,app,2025-01-24 20:09,tok_b52c8f63,161.28,Tideater Audio online
+C00292,app,2025-05-08 00:27,tok_09e8b4c5,133.41,Velvet Fashion
+C00293,web,2025-02-24 13:05,tok_2f593e82,17.92,northwind outdoor
+C00294,app,2025-08-07 08:11,tok_01f733da,75.99,web shop
+C00295,app,2025-07-07 01:48,tok_46e9377f,223.51,harbor books
+C00296,web,2025-08-22 17:42,tok_d2cfa613,29.5,Riverstone Shoes
+C00297,app,2025-07-26 00:39,tok_f9312601,50.33,riverstone
+C00298,phone,2025-05-25 03:58,tok_1439d7e0,35.5,Vista Mag
+C00299,web,2025-06-18 09:13,tok_b78d526a,47.96,pebble pets
+C00300,web,2025-03-14 23:48,tok_c9f997dc,121.53,pebble
+C00301,phone,2025-01-23 09:11,tok_a89eceb0,95.78,Tidewater Aud
+C00302,app,2025-07-09 06:30,tok_2673e7c4,114.3,Lantern Crafts
+C00303,web,2025-07-28 08:33,tok_b4f84a68,34.1,Lantern
+C00304,phone,2025-04-11 20:14,tok_ad21fa03,63.72,Riverstone Shoes online
+C00305,phone,2025-08-23 15:43,tok_67acdfd0,18.63,Driftwood Art
+C00306,app,2025-08-19 05:32,tok_16055fd2,57.66,grnite
+C00307,app,2025-01-25 09:31,tok_6fd62690,60.99,some company
+C00308,app,2025-06-24 21:02,tok_06d6ad25,223.68,Granite Toys
+C00309,phone,2025-01-19 14:06,tok_29998377,46.28,Northwind Outdoor online
+C00310,web,2025-02-17 13:02,tok_41d0fea3,190.57,Saffron Kitchen
+C00311,app,2025-08-04 08:11,tok_48dce4c0,310.1,Lantern Crafts
+C00312,app,2025-04-14 17:21,tok_8bb97588,113.6,Umber Fr
+C00313,app,2025-05-09 10:56,tok_b37f9fe9,69.18,app purchase
+C00314,web,2025-04-17 06:34,tok_71154b57,201.33,Haror Books
+C00315,app,2025-04-06 21:27,tok_2ef2bdfb,52.05,Riverstone
+C00316,branch,2025-05-29 08:39,tok_39a7eb69,173.28,TidewaterAudio
+C00317,app,2025-03-18 17:11,tok_a34828b4,31.48,Zephyr Cycles online
+C00318,phone,2025-08-01 00:36,tok_52b4dced,113.55,FalconOptics
+C00319,app,2025-08-14 18:08,tok_af45316a,22.94,KestrelGames
+C00320,web,2025-02-03 15:47,tok_3fc2f7c6,59.1,Quill Stationery
+C00321,app,2025-04-10 08:24,tok_f003b752,69.57,JuniperHome
+C00322,app,2025-01-16 21:02,tok_a6830b89,20.03,beacon lighting
+C00323,app,2025-08-26 10:23,tok_0ac5f5bd,50.07,granite
+C00324,phone,2025-07-19 15:06,tok_598f8a8e,83.75,Tidewater Audio online
+C00325,web,2025-06-11 17:23,tok_4ca0e776,114.79,ZephyrCycles
+C00326,app,2025-07-11 16:16,tok_4a76ed63,22.35,Coalt Ele
+C00327,app,2025-06-15 22:03,tok_e650a20f,66.24,LanternCrafts
+C00328,branch,2025-08-08 12:31,tok_e863b095,73.42,crescent
+C00329,phone,2025-08-08 23:25,tok_7813032d,138.39,online order
+C00330,phone,2025-02-01 23:54,tok_7a311ee9,176.48,Driftwood Art
+C00331,web,2025-06-02 22:28,tok_636b87f9,53.37,MeadowGarden
+C00332,app,2025-04-10 16:51,tok_d1636096,161.24,Meadow
+C00333,app,2025-04-26 21:38,tok_4ad1d48c,178.17,Beacon Lig
+C00334,app,2025-02-22 04:11,tok_f3dfd0cc,88.09,Hollow Vinyl online
+C00335,app,2025-05-20 21:48,tok_161b3afe,24.29,willow
+C00336,web,2025-05-06 10:33,tok_a73f9ed7,26.57,online order
+C00337,phone,2025-08-15 09:44,tok_8b5623e5,39.83,Quill Sta
+C00338,phone,2025-08-28 09:03,tok_59a4240f,39.68,GlacierWater
+C00339,app,2025-05-20 20:13,tok_e00a817c,235.78,Ivory Linen
+C00340,app,2025-05-05 02:38,tok_b02fb05c,42.02,vista magaznes
+C00341,phone,2025-07-02 12:23,tok_d3c6e66c,69.17,Willow
+C00342,app,2025-08-29 08:06,tok_8b5279a2,31.05,sffron
+C00343,app,2025-03-31 19:29,tok_80b45260,163.64,summit
+C00344,web,2025-08-04 18:45,tok_d1fca780,50.57,lantern crafts
+C00345,web,2025-04-22 09:37,tok_12312fe7,42.2,Zephyr Cycles
+C00346,app,2025-02-13 10:22,tok_400e0a1d,92.36,Falcon
+C00347,app,2025-05-16 03:42,tok_c9762ccd,71.27,beacon lighting
+C00348,app,2025-05-21 04:18,tok_9b55932d,136.42,Kstrel Gam
+C00349,phone,2025-07-19 14:21,tok_8cd927af,94.23,harbor books
+C00350,web,2025-07-09 06:09,tok_f3dfd0cc,47.22,Falcon Optics online
+C00351,phone,2025-03-20 22:23,tok_544c4dae,58.12,Harbor
+C00352,app,2025-03-22 02:02,tok_2c5afb7a,157.02,Lantern Crafts online
+C00353,web,2025-06-04 03:15,tok_75ce4dcf,59.89,Bloom
+C00354,phone,2025-03-31 08:35,tok_2f4dcc8f,159.89,granite toys
+C00355,app,2025-01-26 07:55,tok_391a74a9,75.0,FalconOptics
+C00356,web,2025-07-21 00:41,tok_067783a8,31.47,Meadow Gar
+C00357,app,2025-05-26 23:57,tok_882fe605,61.72,atlas sports
+C00358,app,2025-08-30 20:49,tok_4f9dc4f0,42.52,Lantern Cra
+C00359,web,2025-07-25 00:04,tok_ff8fffbc,37.84,ivory
+C00360,app,2025-03-27 12:09,tok_b2c408b6,34.42,TidewaterAudio
+C00361,web,2025-07-23 09:24,tok_0ae58012,58.72,Zephyr Cycles online
+C00362,web,2025-02-03 10:16,tok_7cc65803,78.22,online store
+C00363,phone,2025-07-20 21:48,tok_6ed63548,154.05,Glacier Wat
+C00364,phone,2025-01-27 12:55,tok_b8588e52,103.12,driftwood art
+C00365,web,2025-06-10 07:33,tok_01a65f90,89.75,Ember Cof
+C00366,app,2025-06-09 16:14,tok_2fe9174e,110.76,cobalt electronics
+C00367,phone,2025-08-28 22:00,tok_62b3f438,104.38,Falcon Opticsonline
+C00368,app,2025-03-29 22:09,tok_c29297e6,38.95,Cobalt Electronics
+C00369,branch,2025-06-06 05:55,tok_1835bd90,148.07,Ivoy Linen
+C00370,app,2025-02-13 22:14,tok_83b82423,51.31,Northind Outdoor online
+C00371,app,2025-08-30 14:17,tok_560def8d,55.16,ElmPharmacy
+C00372,phone,2025-08-02 19:55,tok_5ed429c1,126.26,Juniper Home online
+C00373,branch,2025-02-04 05:48,tok_9c6e0a6d,102.31,Willow
+C00374,app,2025-02-21 13:21,tok_d8fe4eae,143.44,FalcoOptics
+C00375,web,2025-02-08 15:23,tok_224cfa83,143.73,riverstone shoes
+C00376,web,2025-04-10 13:49,tok_8ee76788,20.81,Beacon Lighting
+C00377,app,2025-07-31 00:28,tok_66c45f7a,20.36,ember coffee
+C00378,app,2025-07-06 07:35,tok_5f9c4c07,36.49,pebble pes
+C00379,app,2025-02-05 05:40,tok_f9312601,51.38,Driftwood Art
+C00380,app,2025-05-02 21:37,tok_b9ec8751,51.17,kestrel games
+C00381,app,2025-04-03 20:54,tok_3214a295,135.79,juniper home
+C00382,branch,2025-03-14 02:03,tok_4e73f09b,48.58,beacon
+C00383,phone,2025-05-26 00:26,tok_6ff18126,87.7,internet purchase
+C00384,app,2025-05-09 21:23,tok_7774f4ad,136.27,Lantern Crafts
+C00385,app,2025-07-08 21:56,tok_d1b2dc54,62.57,Riverstoe Shoes
+C00386,web,2025-05-03 07:18,tok_8324b61a,36.27,atlas sports
+C00387,app,2025-05-19 23:25,tok_3d01dd51,20.67,Pixel Club
+C00388,app,2025-02-15 12:59,tok_c92e4c81,35.2,Ember Cof
+C00389,phone,2025-08-01 22:21,tok_d161e0a8,62.26,velvet fashion
+C00390,phone,2025-06-22 21:32,tok_578cca99,40.83,Saffron Kit
+C00391,phone,2025-08-19 05:14,tok_71cfb114,66.04,ivory linen
+C00392,app,2025-08-31 02:28,tok_e53cd718,20.08,Crescent Jew
+C00393,web,2025-05-13 00:44,tok_d517af35,92.53,internet purchase
+C00394,app,2025-04-01 05:01,tok_d8fcd1bf,26.47,CobaltElectronics
+C00395,phone,2025-07-05 09:33,tok_adcb3057,200.17,DriftwoodArt
+C00396,app,2025-04-21 21:12,tok_2ef2bdfb,139.17,Diftwood Art online
+C00397,phone,2025-06-14 06:02,tok_02ed1780,68.35,Cobalt Electronics
+C00398,web,2025-05-23 07:29,tok_19b19d2f,73.71,tidewater audio
+C00399,phone,2025-06-23 04:43,tok_ef5516a0,48.94,station diner
+C00400,phone,2025-06-29 06:01,tok_2dc1be97,61.68,Embe Coffee
+C00401,app,2025-08-27 14:33,tok_deea120b,23.55,Hollow
+C00402,app,2025-06-10 22:02,tok_90c1d733,111.46,Tidewater Aud
+C00403,web,2025-05-11 16:18,tok_766024f7,61.33,kestrel games
+C00404,phone,2025-03-02 13:49,tok_0f013b0f,48.43,Oak Hardware
+C00405,app,2025-06-06 16:10,tok_a1f1ad42,18.86,FreshCrate
+C00406,phone,2025-05-11 01:50,tok_555ea155,23.79,Falcon Optics online
+C00407,phone,2025-03-29 09:18,tok_d49c6c99,59.64,AtlasSports
+C00408,branch,2025-04-01 18:45,tok_6b1570f5,13.47,HarborBooks
+C00409,app,2025-05-28 15:33,tok_2057d78c,68.94,Falcon Ot
+C00410,web,2025-08-10 16:24,tok_891f05c0,57.37,BeaconLighting
+C00411,app,2025-04-28 14:22,tok_41c98d64,30.87,AtlasSports
+C00412,web,2025-05-22 02:00,tok_0693fd20,106.14,Saffron
+C00413,phone,2025-04-05 23:28,tok_97f5df91,49.32,Pebble
+C00414,phone,2025-03-19 11:30,tok_8bb97588,97.9,DriftwoodArt
+C00415,phone,2025-01-20 10:56,tok_8a3ebf2f,49.88,FalconOptics
+C00416,app,2025-04-18 12:48,tok_54289937,42.16,nimbus
+C00417,phone,2025-03-13 14:25,tok_f3dfd0cc,113.93,RiverstoneShoes
+C00418,branch,2025-04-02 22:37,tok_480e5df7,34.14,Pebble Pet
+C00419,web,2025-06-06 15:53,tok_0258f56a,31.97,Vista Magazines online
+C00420,branch,2025-06-22 20:35,tok_9da13fc6,33.72,MainStreetFuel
+C00421,phone,2025-04-06 01:40,tok_d6b470a3,75.65,JunierHome
+C00422,branch,2025-08-29 13:58,tok_544c4dae,61.32,crescent jewelry
+C00423,app,2025-04-11 01:16,tok_7d20d60a,20.95,granite
+C00424,app,2025-02-13 21:24,tok_480e5df7,126.44,tidewater
+C00425,phone,2025-06-06 08:41,tok_e91b55cc,11.45,nimbus
+C00426,phone,2025-05-15 11:08,tok_15463f02,38.91,Ember Coffee
+C00427,app,2025-03-05 12:16,tok_d16ccf13,178.81,Beacon Lighting
+C00428,phone,2025-03-11 20:02,tok_c9f997dc,44.61,crescnt
+C00429,phone,2025-01-31 06:05,tok_e9e0c92a,109.47,Hollow Vinyl online
+C00430,branch,2025-06-28 09:22,tok_8d763981,428.73,not sure
+C00431,app,2025-07-07 12:42,tok_c88eb091,46.51,Glacier Water online
+C00432,app,2025-06-10 10:49,tok_58b8f1a0,8.14,Pebble
+C00433,branch,2025-03-05 16:15,tok_2e57b2a8,126.04,Umber Furniture
+C00434,app,2025-04-27 07:14,tok_d14e7b19,102.68,KestrelGaes
+C00435,web,2025-02-09 06:34,tok_679090c6,93.08,BeaconLighting

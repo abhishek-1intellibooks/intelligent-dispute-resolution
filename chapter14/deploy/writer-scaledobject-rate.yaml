@@ -1,0 +1,27 @@
+# Variant of writer-scaledobject.yaml with a second, rate trigger: one replica per
+# 9 claims arriving a minute (10 drafts a worker-minute at 90% utilisation).
+# KEDA scales to the larger of the two triggers. This is the rule peak_day.py
+# simulates; apply it INSTEAD of writer-scaledobject.yaml, not as well.
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: writer
+  namespace: disputes
+spec:
+  scaleTargetRef:
+    name: writer
+  minReplicaCount: 2
+  maxReplicaCount: 20
+  cooldownPeriod: 300
+  triggers:
+  - type: kafka
+    metadata:
+      bootstrapServers: events:9092
+      consumerGroup: writer
+      topic: case.escalated
+      lagThreshold: '50'
+  - type: prometheus
+    metadata:
+      serverAddress: http://prometheus.monitoring:9090
+      query: sum(rate(events_published_total{topic="case.escalated"}[1m])) * 60
+      threshold: '9'

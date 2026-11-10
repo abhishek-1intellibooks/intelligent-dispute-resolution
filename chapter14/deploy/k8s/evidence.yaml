@@ -1,0 +1,64 @@
+# Evidence (Ch. 11): chapter11/evidence_pipeline.py (Dockerfile.worker, CHAPTER=chapter11).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: evidence
+  namespace: disputes
+  labels:
+    app: evidence
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: evidence
+  template:
+    metadata:
+      labels:
+        app: evidence
+    spec:
+      containers:
+      - name: evidence
+        image: dispute/evidence:1.0
+        env:
+        - &id001
+          name: KAFKA_BOOTSTRAP
+          value: events:9092
+        - &id002
+          name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: evidence-db
+              key: url
+        - name: ROLE
+          value: consumer
+        - name: GROUP
+          value: evidence
+        - name: TOPICS
+          value: document.received
+        - name: HANDLER
+          value: handlers:evidence
+        resources:
+          requests:
+            cpu: '1'
+            memory: 1Gi
+          limits:
+            memory: 1Gi
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+      - name: outbox-relay
+        image: dispute/evidence:1.0
+        env:
+        - *id001
+        - *id002
+        - name: ROLE
+          value: relay
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            memory: 128Mi
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false

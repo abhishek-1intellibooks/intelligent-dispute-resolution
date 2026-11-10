@@ -1,0 +1,53 @@
+{
+ "auc": 0.9370479856738311,
+ "bands": [
+  {
+   "band": "P1",
+   "claims": 506,
+   "fifo_breaches": 185,
+   "share": "11.7%"
+  },
+  {
+   "band": "P2",
+   "claims": 366,
+   "fifo_breaches": 72,
+   "share": "8.5%"
+  },
+  {
+   "band": "P3",
+   "claims": 3436,
+   "fifo_breaches": 66,
+   "share": "79.8%"
+  }
+ ],
+ "replay": [
+  {
+   "policy": "First in, first out",
+   "breaches": 323,
+   "rate": 0.07497678737233054,
+   "unauthorized": 50,
+   "p95_wait_days": 9.0
+  },
+  {
+   "policy": "Earliest due date",
+   "breaches": 309,
+   "rate": 0.07172701949860724,
+   "unauthorized": 51,
+   "p95_wait_days": 9.0
+  },
+  {
+   "policy": "Least slack (predicted effort)",
+   "breaches": 94,
+   "rate": 0.02181987000928505,
+   "unauthorized": 16,
+   "p95_wait_days": 10.0
+  },
+  {
+   "policy": "Least slack (perfect foresight)",
+   "breaches": 0,
+   "rate": 0.0,
+   "unauthorized": 0,
+   "p95_wait_days": 10.0
+  }
+ ]
+}

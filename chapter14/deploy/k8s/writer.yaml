@@ -1,0 +1,67 @@
+# Writer (Ch. 12): chapter12/service.py (Dockerfile.worker, CHAPTER=chapter12). Model calls go
+# through the internal gateway that applies the shared token budget (chapter14/budget.py).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: writer
+  namespace: disputes
+  labels:
+    app: writer
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: writer
+  template:
+    metadata:
+      labels:
+        app: writer
+    spec:
+      containers:
+      - name: writer
+        image: dispute/writer:1.0
+        env:
+        - &id001
+          name: KAFKA_BOOTSTRAP
+          value: events:9092
+        - &id002
+          name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: writer-db
+              key: url
+        - name: ROLE
+          value: consumer
+        - name: GROUP
+          value: writer
+        - name: TOPICS
+          value: case.escalated,recovery.decided
+        - name: HANDLER
+          value: handlers:writer
+        - name: MODEL_GATEWAY_URL
+          value: http://model-gateway:8000
+        resources:
+          requests:
+            cpu: 250m
+            memory: 256Mi
+          limits:
+            memory: 256Mi
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+      - name: outbox-relay
+        image: dispute/writer:1.0
+        env:
+        - *id001
+        - *id002
+        - name: ROLE
+          value: relay
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            memory: 128Mi
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
